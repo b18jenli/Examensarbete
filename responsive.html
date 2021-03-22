@@ -6,11 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
         <style>
+            
          @media screen and (max-width:414px){
                 /* CSS mobil */
                 body{
-                color: white;     
-                background-color: black; 
+                    color: white;     
+                    background-color: black; 
+                }
+                h1{
+                    text-align: center;
+                    color: white; 
+                }
+                .navbar{
+                    background-color: lightgray;
+                    overflow: hidden;
+                }
+                .navbar a {
+                    float: left;
+                    color: black;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                }
+                .content{
+                    color: black; 
+                    background-color: white; 
+                    padding: 20px; 
+                    border: 5px solid black; 
+                    margin-top: 10px;  
                 }
             }
               
@@ -19,10 +43,44 @@
                 body{
                 background-color: white; 
                 }
+                            h1{
+                text-align: center;
+            }
+            .navbar {
+                background-color: lightgray;
+                overflow: hidden;
+                
+            }
+            .navbar a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .navbar a:hover {
+                background-color: grey;
+                color: white;
+            }
+            .content{
+                padding: 20px; 
+                border: 5px solid black; 
+                margin-top: 10px; 
+            }
             }  
         </style>
     </head>
     <body>
         <h1>Responsive page headline</h1>
+            <div class="navbar">
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </div>
+        <div class="content">
+        <h2>Content</h2>
+        </div>
     </body>
 </html>
