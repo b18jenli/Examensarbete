@@ -1,50 +1,129 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8"> 
         <title>Fixed page</title>
-        <meta charset="utf-8">  
 
         <style>
+            body{
+                font-family: sans-serif;
+                margin: 30px; 
+            }
             h1{
                 text-align: center;
             }
-            .navbar {
-                background-color: lightgray;
+            .nav_menu {
+                border-top: solid black 2px; 
+                border-bottom:  solid black 2px;   
                 overflow: hidden;
-                
+                padding-left: 320px; 
             }
-            .navbar a {
+            .nav_menu a {
+                color: black;     
                 float: left;
-                color: black;
+                font-size: 16px;
                 text-align: center;
                 padding: 14px 16px;
+                text-decoration: none;     
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dd_btn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;  
+            }
+            .nav_menu a:hover, .dropdown:hover .dd_btn {
+                background-color: lightcoral;
+            }
+            .dd_content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dd_content a {
+                float: none;
+                color: black;
+                padding: 14px 16px;
                 text-decoration: none;
-                font-size: 17px;
+                display: block;
+                text-align: left;
             }
-            .navbar a:hover {
-                background-color: grey;
-                color: white;
+            .dd_content a:hover {
+                background-color: lightcoral;
             }
-            .content{
-                padding: 20px; 
-                border: 5px solid black; 
-                margin-top: 10px; 
-                height: 1000px; 
+            .dropdown:hover .dd_content {
+                display: block;
             }
-
+            .start_image{
+                background-color: lightcoral;
+                margin-top: 20px; 
+                height: 300px; 
+            }
+             .content{
+                display: flex; 
+                border: solid lightgray 2px;  
+            }
+            h3{
+                padding: 30px; 
+            }
+            p{
+                padding: 30px; 
+            }
+            .small_image{
+                background-color: lightcoral;
+                width: 2000px; 
+                height: 500px; 
+            }
         </style>
-        
     </head>
     <body>
-        <h1> Fixed page headline</h1>
-        <div class="navbar">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
+        <h1>Fixed web page headline</h1>
+        <div class="nav_menu">
+            <a href="#home">HOME</a>
+            <a href="#news">NEWS</a>
+            <div class="dropdown">
+                <button class="dd_btn">PRODUCTS</button>
+                <div class="dd_content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div> 
+                <div class="dropdown">
+                <button class="dd_btn">MORE PRODUCTS</button>
+                <div class="dd_content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+                <div class="dropdown">
+                <button class="dd_btn">EVEN MORE PRODUCTS</button>
+                <div class="dd_content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div> 
         </div>
+
+        <div class="start_image">Image placeholder</div>
+        <p>Text</p>
+        <h2>Content in focus:</h2>
         <div class="content">
-        <h2>Content</h2>
+        <div class="small_image">Image placeholder</div>
+            <div>
+            <h3>Headline</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
     </body>
 </html>
