@@ -2,128 +2,94 @@
 <html>
     <head>
         <meta charset="utf-8"> 
-        <title>Fixed page</title>
-
-        <style>
-            body{
-                font-family: sans-serif;
-                margin: 30px; 
-            }
-            h1{
-                text-align: center;
-            }
-            .nav_menu {
-                border-top: solid black 2px; 
-                border-bottom:  solid black 2px;   
-                overflow: hidden;
-                padding-left: 320px; 
-            }
-            .nav_menu a {
-                color: black;     
-                float: left;
-                font-size: 16px;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;     
-            }
-            .dropdown {
-                float: left;
-                overflow: hidden;
-            }
-            .dropdown .dd_btn {
-                font-size: 16px;  
-                border: none;
-                outline: none;
-                padding: 14px 16px;
-                background-color: inherit;
-                font-family: inherit;  
-            }
-            .nav_menu a:hover, .dropdown:hover .dd_btn {
-                background-color: lightcoral;
-            }
-            .dd_content {
-                display: none;
-                position: absolute;
-                background-color: white;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            }
-            .dd_content a {
-                float: none;
-                color: black;
-                padding: 14px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-            .dd_content a:hover {
-                background-color: lightcoral;
-            }
-            .dropdown:hover .dd_content {
-                display: block;
-            }
-            .start_image{
-                background-color: lightcoral;
-                margin-top: 20px; 
-                height: 300px; 
-            }
-             .content{
-                display: flex; 
-                border: solid lightgray 2px;  
-            }
-            h3{
-                padding: 30px; 
-            }
-            p{
-                padding: 30px; 
-            }
-            .small_image{
-                background-color: lightcoral;
-                width: 2000px; 
-                height: 500px; 
-            }
-        </style>
+        <link rel="stylesheet" href="style_fixed.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <script src="https://kit.fontawesome.com/352148c971.js" crossorigin="anonymous"></script>
+    <script>
+        function showpage(pageid){
+            var pages = document.getElementsByClassName("page");
+            for(var i = 0; i < pages.length; i++)
+            {
+                pages[i].style.display="none";
+            }
+            document.getElementById(pageid).style.display="block";
+        }
+
+        function dropDown(){
+            document.getElementById("dropdown1").classList.toggle("show");
+        }
+        function dropDown2(){
+            document.getElementById("dropdown2").classList.toggle("show");
+        }
+        
+        window.onclick = function(e){
+            if (!e.target.matches('.ddBtn')) {
+                var myDropdown = document.getElementById("dropdown1");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+                var myDropdown2 = document.getElementById("dropdown2");
+                if (myDropdown2.classList.contains('show')) {
+                    myDropdown2.classList.remove('show');
+                }
+            }
+        }
+
+</script>
+
     <body>
-        <h1>Fixed web page headline</h1>
-        <div class="nav_menu">
-            <a href="#home">HOME</a>
-            <a href="#news">NEWS</a>
+        <div id="header">
+            <h1>Fixed web page headline</h1>
+        </div>
+        
+        <div class="navbar" id="menu">
+            <a onclick="showpage('page1');">Home</a>
+            <a onclick="showpage('page2');">News</a>
             <div class="dropdown">
-                <button class="dd_btn">PRODUCTS</button>
-                <div class="dd_content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                <button class="ddBtn" onclick="dropDown()">Dropdown 1
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="ddContent" id="dropdown1">
+                    <a onclick="showpage('page3');">Page 3</a>
                 </div>
             </div> 
-                <div class="dropdown">
-                <button class="dd_btn">MORE PRODUCTS</button>
-                <div class="dd_content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-                <div class="dropdown">
-                <button class="dd_btn">EVEN MORE PRODUCTS</button>
-                <div class="dd_content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+            
+            <div class="dropdown">
+                <button class="ddBtn" onclick="dropDown2()">Dropdown 2
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="ddContent" id="dropdown2">
+                    <a onclick="showpage('page4');">Page 4</a>
                 </div>
             </div> 
+            <i class="fas fa-shopping-cart" id="ikon"></i>
+        </div>
+        
+        <div id="page1" class="page">
+          <h2>PAGE 1</h2>
+        </div>
+ 
+        <div id="page2" class="page">
+          <h2>PAGE 2</h2>
+        </div>
+ 
+        <div id="page3" class="page">
+          <h2>PAGE 3</h2>
+        </div>
+         
+        <div id="page4" class="page">
+          <h2>PAGE 4</h2>
+        </div>
+ 
+        <div id="page5" class="page">
+          <h2>PAGE 5</h2>
+        </div>
+ 
+        <div id="page6" class="page">
+          <h2>PAGE 6</h2>
         </div>
 
-        <div class="start_image">Image placeholder</div>
-        <p>Text</p>
-        <h2>Content in focus:</h2>
-        <div class="content">
-        <div class="small_image">Image placeholder</div>
-            <div>
-            <h3>Headline</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-    </body>
+
+</body>
 </html>
