@@ -17,29 +17,50 @@
             document.getElementById(pageid).style.display="block";
         }
 
-        function dropDown(){
-            document.getElementById("dropdown1").classList.toggle("show");
+        function myDropdown(){
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-        function dropDown2(){
-            document.getElementById("dropdown2").classList.toggle("show");
+        function myDropdown2(){
+            document.getElementById("myDropdown2").classList.toggle("show");
         }
         
-        window.onmouseout = function(e){
+        window.onclick = function(e){
             if (!e.target.matches('.ddBtn')) {
-                var myDropdown = document.getElementById("dropdown1");
+                var myDropdown = document.getElementById("myDropdown");
                 if (myDropdown.classList.contains('show')) {
                     myDropdown.classList.remove('show');
                 }
-                var myDropdown2 = document.getElementById("dropdown2");
+                var myDropdown2 = document.getElementById("myDropdown2");
                 if (myDropdown2.classList.contains('show')) {
                     myDropdown2.classList.remove('show');
                 }
             }
         }
+        
+        var slideIndex = -1;
+        showSlides();
 
-</script>
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length){
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); 
+        }
+    </script>
 
-    <body>
+    <body onload="showSlides();">
         <div id="header">
             <h1>Fixed web page headline</h1>
         </div>
@@ -48,20 +69,24 @@
             <a onclick="showpage('page1');">Home</a>
             <a onclick="showpage('page2');">News</a>
             <div class="dropdown">
-                <button class="ddBtn" onclick="dropDown()">Dropdown 1
+                <button class="ddBtn" onclick="myDropdown()">Dropdown 1
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="ddContent" id="dropdown1">
+                <div class="ddContent" id="myDropdown">
                     <a onclick="showpage('page3');">Page 3</a>
+                    <a onclick="showpage('page6');">Page 6</a>
+                    <a onclick="showpage('page7');">Page 7</a>
                 </div>
             </div> 
             
             <div class="dropdown">
-                <button class="ddBtn" onclick="dropDown2()">Dropdown 2
+                <button class="ddBtn" onclick="myDropdown2()">Dropdown 2
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="ddContent" id="dropdown2">
+                <div class="ddContent" id="myDropdown2">
                     <a onclick="showpage('page4');">Page 4</a>
+                    <a onclick="showpage('page8');">Page 8</a>
+                    <a onclick="showpage('page9');">Page 9</a>
                 </div>
             </div> 
             <i class="fas fa-shopping-cart" id="ikon" onclick="showpage('page5');"></i>
@@ -69,6 +94,30 @@
         
         <div id="page1" class="page">
           <h2>HOME (1)</h2>
+          <div class="slideshow-container">
+              <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="#" >
+                  <div class="text"><a href="#">Image source</a></div>
+              </div>
+              
+              <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="#">
+                  <div class="text"><a href="#">Image source</a></div>
+              </div>
+              
+              <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="#" >
+                  <div class="text"><a href="#">Image source</a></div>
+              </div>
+            </div><br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
  
         <div id="page2" class="page">
@@ -84,13 +133,24 @@
         </div>
  
         <div id="page5" class="page">
-          <h2>PAGE 5</h2>
+          <h2>SHOPPING CART (5)</h2>
         </div>
  
         <div id="page6" class="page">
           <h2>PAGE 6</h2>
         </div>
+        
+         <div id="page7" class="page">
+          <h2>PAGE 7</h2>
+        </div>
+        
+         <div id="page8" class="page">
+          <h2>PAGE 8</h2>
+        </div>
+           <div id="page9" class="page">
+          <h2>PAGE 9</h2>
+        </div>
 
 
-</body>
+    </body>
 </html>

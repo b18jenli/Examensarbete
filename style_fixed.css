@@ -1,105 +1,171 @@
-body{
-     
+
+h1{
+    text-align: center; 
 }
-h1 {
-   text-align: center; 
+h2{
+    text-align: center;
+    margin-top: 50px; 
 }
 #header{
     margin: 50px 0px 50px 0px; 
 }
 
-#page1 {
-    display:block;background:white;
+#page1{
+    display:block;
+    background:white;
 }
-#page2 {
+
+.mySlides{
+    display: none;
+}
+img{
+    vertical-align: middle;
+    background-color: lightgrey;
+    width: 960px;
+    height: 250px;
+}
+.slideshow-container{
+    max-width: 960px;
+    max-height: 250px;
+    top: 50px;
+    position: relative;
+    margin: auto;
+}
+.text{
+    color: #717171;
+    font-size: 9px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%; /*ÄNDRA TILL PIXLAR!*/
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 10%; /*ÄNDRA TILL PIXLAR!*/
+}
+.numbertext{
+    color: #717171;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    margin-top:50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active{
+    background-color: #717171;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+#page2{
     display:none;background:blue;
 }
-#page3 {
+#page3{
     display:none;background:pink;
 }
-#page4 {
+#page4{
     display:none;background:green;
 }
-#page5 {
+#page5{
     display:none;background:yellow;
 }
-#page6 {
+#page6{
     display:none;background:gray;
-}
-    
-.page {
+}  
+#page7{
+    display:none;background:aqua;
+}  
+#page8{
+    display:none;background:violet;
+}  
+#page9{
+    display:none;background:purple;
+}  
+.page{
     position:absolute;
     left:30px;
     top:200px;
     right:30px;
     bottom:0px;
 }
-
 #ikon{
-   padding: 15px 10px 10px 0px;  
+    padding: 15px 10px 10px 0px;  
     position: absolute;
     right: 100px; 
 }
-
-.navbar {
-  overflow: hidden;
-  border-top: solid black 2px; 
-  border-bottom:  solid black 2px; 
-  display: flex;
-  justify-content: center;
+.navbar{
+    overflow: hidden;
+    border-top: solid black 2px; 
+    border-bottom:  solid black 2px; 
+    display: flex;
+    justify-content: center;
 }
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;   
+.navbar a{
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;   
 }
-
-.dropdown {
-  float: left;
-  overflow: hidden;
+.dropdown{
+    float: left;
+    overflow: hidden;
 }
-
-.dropdown .ddBtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
+.dropdown .ddBtn{
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
 }
-
-.navbar a:hover, .dropdown:hover .ddBtn {
-  background-color: lightcoral;
+.navbar a:hover, .dropdown:hover .ddBtn{
+    background-color: lightcoral;
 }
 
-.ddContent {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.ddContent{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
-
-.ddContent a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+.ddContent a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
-
-.ddContent a:hover {
-  background-color: lightcoral;
+.ddContent a:hover{
+    background-color: lightcoral;
 }
-
-.show {
-  display: block;
+.show{
+    display: block;
 }
     
      
