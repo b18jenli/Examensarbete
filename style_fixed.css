@@ -6,19 +6,24 @@ h2{
     text-align: center;
     margin-top: 50px; 
 }
+
 #header{
     margin: 50px 0px 50px 0px; 
 }
-
+.page{
+    position:absolute;
+    left:30px;
+    top:200px;
+    right:30px;
+}
 #page1{
     display:block;
     background:white;
 }
-
 .mySlides{
     display: none;
 }
-img{
+.slidePics{
     vertical-align: middle;
     background-color: lightgrey;
     width: 960px;
@@ -78,36 +83,39 @@ img{
     to {opacity: 1}
 }
 #page2{
-    display:none;background:blue;
+    display:none;
+    background:blue;
 }
 #page3{
-    display:none;background:pink;
+    display:none;
+    background:pink;
+    padding: 30px; 
 }
 #page4{
-    display:none;background:green;
+    display:none;
+    background:green;
 }
 #page5{
-    display:none;background:yellow;
+    display:none;
+    background:yellow;
 }
 #page6{
-    display:none;background:gray;
+    display:none;
+    background:gray;
 }  
 #page7{
-    display:none;background:aqua;
+    display:none;
+    background:aqua;
 }  
 #page8{
-    display:none;background:violet;
+    display:none;
+    background:violet;
 }  
 #page9{
-    display:none;background:purple;
+    display:none;
+    background:purple;
 }  
-.page{
-    position:absolute;
-    left:30px;
-    top:200px;
-    right:30px;
-    bottom:0px;
-}
+
 #ikon{
     padding: 15px 10px 10px 0px;  
     position: absolute;
@@ -166,6 +174,35 @@ img{
 }
 .show{
     display: block;
+}
+.productBox{
+    background-color: white;
+    width: 300px;
+    height: 400px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 30px; 
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+}
+.imgText{
+    margin: 30px; 
+}
+.productPic{
+    background-color: lightgray; 
+    width: 200px; 
+    height: 200px; 
+    display: block; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px; 
+}
+h4{
+    margin-bottom: 0; 
+}
+p{
+    margin-top: 0; 
 }
     
      
