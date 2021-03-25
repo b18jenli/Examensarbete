@@ -34,25 +34,27 @@ h1 {
     right:30px;
     bottom:0px;
 }
+
 #ikon{
-   padding: 15px 10px 10px 0px; 
-   margin-right: 20px; 
-   float: right;
+   padding: 15px 10px 10px 0px;  
+    position: absolute;
+    right: 100px; 
 }
 
 .navbar {
   overflow: hidden;
   border-top: solid black 2px; 
-  border-bottom:  solid black 2px;
+  border-bottom:  solid black 2px; 
+  display: flex;
+  justify-content: center;
 }
-
 .navbar a {
   float: left;
   font-size: 16px;
   color: black;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none;   
 }
 
 .dropdown {

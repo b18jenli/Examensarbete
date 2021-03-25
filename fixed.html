@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Fixed web page</title>
         <meta charset="utf-8"> 
         <link rel="stylesheet" href="style_fixed.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,7 @@
             document.getElementById("dropdown2").classList.toggle("show");
         }
         
-        window.onclick = function(e){
+        window.onmouseout = function(e){
             if (!e.target.matches('.ddBtn')) {
                 var myDropdown = document.getElementById("dropdown1");
                 if (myDropdown.classList.contains('show')) {
@@ -63,23 +64,23 @@
                     <a onclick="showpage('page4');">Page 4</a>
                 </div>
             </div> 
-            <i class="fas fa-shopping-cart" id="ikon"></i>
+            <i class="fas fa-shopping-cart" id="ikon" onclick="showpage('page5');"></i>
         </div>
         
         <div id="page1" class="page">
-          <h2>PAGE 1</h2>
+          <h2>HOME (1)</h2>
         </div>
  
         <div id="page2" class="page">
-          <h2>PAGE 2</h2>
+          <h2>NEWS (2)</h2>
         </div>
  
         <div id="page3" class="page">
-          <h2>PAGE 3</h2>
+          <h2>PRODUCT PAGE (3)</h2>
         </div>
          
         <div id="page4" class="page">
-          <h2>PAGE 4</h2>
+          <h2>PRODUCT PAGE (4)</h2>
         </div>
  
         <div id="page5" class="page">
