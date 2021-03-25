@@ -175,7 +175,7 @@ h2{
 .show{
     display: block;
 }
-.productBox{
+.card1, .card2, .card3, .card4{
     background-color: white;
     width: 300px;
     height: 400px; 

@@ -58,6 +58,24 @@
             dots[slideIndex-1].className += " active";
             setTimeout(showSlides, 3000); 
         }
+        
+        function addToCart(cardid){
+  if(cardid === 'card1'){
+    window.card ='product1';
+    alert('Done');
+  }
+  if(cardid === 'card2'){
+    window.card = 'product2';
+    alert('Done');
+  }
+  if(cardid === 'card3'){
+    window.card ='product3';
+    alert('Done');
+  }
+  document.getElementById("product").value = card;
+
+}
+
     </script>
 
     <body onload="showSlides();">
@@ -127,40 +145,40 @@
         <div id="page3" class="page">
           <h2>PRODUCT PAGE (3)</h2>
             <div class="gallery">
-                <div class="productBox">
+                <div class="card1" id="card1">
                     <img class="productPic"src="#">
                     <div class="imgText"> 
                         <h4>Product 1</h4>
                         <p>Description</p>
                         <h3>123 SEK</h3>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart('card1')" value="product1">Add to cart</button>
                     </div>    
                 </div>
-                <div class="productBox">
+                <div class="card2" id="card2">
                     <img class="productPic"src="#">
                     <div class="imgText">
                         <h4>Product 2</h4>
                         <p>Description</p>
                         <h3>123 SEK</h3>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart('card2')" value="product2">Add to cart</button>
                     </div>    
                 </div>
-                <div class="productBox">
+                <div class="card3" id="card3">
                     <img class="productPic"src="#">
                     <div class="imgText">
                         <h4>Product 3</h4>
                         <p>Description</p>
                         <h3>123 SEK</h3>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart('card3')" value="product3">Add to cart</button>
                     </div>    
                 </div>
-                   <div class="productBox">
+                   <div class="card4" id="card4">
                     <img class="productPic"src="#">
                     <div class="imgText">
                         <h4>Product 4</h4>
                         <p>Description</p>
                         <h3>123 SEK</h3>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart('card4')" value="product4">Add to cart</button>
                     </div>    
                 </div>
             </div>
@@ -185,8 +203,12 @@
          <div id="page8" class="page">
           <h2>PRODUCT PAGE (8)</h2>
         </div>
-           <div id="page9" class="page">
+           <div id="page9" class="page" style="height: 500px">
           <h2>SHOPPING CART (9)</h2>
+               <form style="background-color: white">
+               <input name="product" id="product" value>
+               </form>
+               
         </div>
 
 
