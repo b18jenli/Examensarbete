@@ -113,7 +113,7 @@ h2{
 }  
 #page9{
     display:none;
-    background:purple;
+   /* background:purple;*/
 }  
 
 #ikon{
@@ -140,7 +140,7 @@ h2{
     float: left;
     overflow: hidden;
 }
-.dropdown .ddBtn{
+.dropdown .btn-dd{
     font-size: 16px;  
     border: none;
     outline: none;
@@ -149,7 +149,7 @@ h2{
     background-color: inherit;
     font-family: inherit;
 }
-.navbar a:hover, .dropdown:hover .ddBtn{
+.navbar a:hover, .dropdown:hover .btn-dd{
     background-color: lightcoral;
 }
 
@@ -175,34 +175,6 @@ h2{
 .show{
     display: block;
 }
-.card1, .card2, .card3, .card4{
-    background-color: white;
-    width: 300px;
-    height: 400px; 
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin: 30px; 
-}
-.gallery{
-    display: flex;
-    justify-content: center;
-}
-.imgText{
-    margin: 30px; 
-}
-.productPic{
-    background-color: lightgray; 
-    width: 200px; 
-    height: 200px; 
-    display: block; 
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 25px; 
-}
-h4{
-    margin-bottom: 0; 
-}
-p{
-    margin-top: 0; 
-}
+
     
      
