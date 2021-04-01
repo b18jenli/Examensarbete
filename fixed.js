@@ -151,7 +151,7 @@ function showSlides() {
     setTimeout(showSlides, 3000); 
 }
 
-  function myFunction() {
+  function menuFunction() {
                 var x = document.getElementById("menu");
                 if (x.className === "navbar") {
                     x.className += " responsive";
