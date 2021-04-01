@@ -1,91 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Responsive page</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-
-        <style>
-            
-         @media screen and (max-width:414px){
-                /* CSS mobil */
-                body{
-                    color: white;     
-                    background-color: black; 
-                }
-                h1{
-                    text-align: center;
-                    color: white; 
-                }
-             
-                .navbar{
-                    background-color: lightgray;
-                    overflow: hidden;
-                }
-                .navbar a {
-                    float: left;
-                    color: black;
-                    text-align: center;
-                    padding: 14px 16px;
-                    text-decoration: none;
-                    font-size: 17px;
-                }
-                .content{
-                    color: black; 
-                    background-color: white; 
-                    padding: 20px; 
-                    border: 5px solid black; 
-                    margin-top: 10px;  
-                }
-            }
-              
-            @media screen and (min-width:415px){
-                /* CSS desktop */
-                body{
-                background-color: white; 
-                }
-                            h1{
-                text-align: center;
-            }
-            .navbar {
-                background-color: lightgray;
-                overflow: hidden;
-                
-            }
-            .navbar a {
-                float: left;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-            }
-            .navbar a:hover {
-                background-color: grey;
-                color: white;
-            }
-            .content{
-                padding: 20px; 
-                border: 5px solid black; 
-                margin-top: 10px; 
-            }
-            }  
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="responsive.css">
+        <script src="fixed.js" async></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
-        <h1>Responsive page headline</h1>
-        <div class="mobile_container">
-            <div class="navbar">
-                <div class="links">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#news">News</a>
-                    <a href="#products">Products</a>
-                    <a href="#contact">Contact</a>
+    <body> 
+        <div id="header">
+            <h1>Responsive web page headline</h1>
+        </div>
+
+        <div class="navbar" id="menu">
+            <a onclick="showpage('page1');">Home</a>
+            <a onclick="showpage('page2');">News</a>
+            <div class="dropdown">
+                <button class="btn-dd" onclick="myDropdown()">Products
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dd-content" id="myDropdown">
+                    <a onclick="showpage('page3');">Product page (3)</a>
+                    <a onclick="showpage('page4');">Product page (4)</a>
+                    <a onclick="showpage('page5');">Product page (5)</a>
                 </div>
-            </div>
+            </div> 
+            
+            <div class="dropdown">
+                <button class="btn-dd" onclick="myDropdown2()">Products
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dd-content" id="myDropdown2">
+                    <a onclick="showpage('page6');">Page 6</a>
+                    <a onclick="showpage('page7');">Page 7</a>
+                    <a onclick="showpage('page8');">Page 8</a>
+                </div>
+            </div> 
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
-        <div class="content">
-        <h2>Content</h2>
-        </div>
-    </body>
+
+
+
+
+
+</body>
 </html>

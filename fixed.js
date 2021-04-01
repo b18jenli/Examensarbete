@@ -150,3 +150,12 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 3000); 
 }
+
+  function myFunction() {
+                var x = document.getElementById("menu");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }

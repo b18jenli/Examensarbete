@@ -152,7 +152,7 @@ h2{
     background-color: lightcoral;
 }
 
-.ddContent{
+.dd-content{
     display: none;
     position: absolute;
     background-color: white;
@@ -160,7 +160,7 @@ h2{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.ddContent a{
+.dd-content a{
     float: none;
     color: black;
     padding: 12px 16px;
@@ -168,7 +168,7 @@ h2{
     display: block;
     text-align: left;
 }
-.ddContent a:hover{
+.dd-content a:hover{
     background-color: lightcoral;
 }
 .show{
