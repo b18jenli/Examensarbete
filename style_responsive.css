@@ -1,9 +1,23 @@
+body{
+    margin: 0; 
+}
 #header{
     margin: 50px 0px 50px 0px; 
+}
+.page{
+    position:absolute;
+    width: 100%;
+    height: 100%; 
 }
 h1{
     text-align: center; 
 }
+h2{
+    text-align: center;
+    margin-top: 50px; 
+}
+
+/*RESPONSIVE NAVBAR*/
 .navbar {
     overflow: hidden;
     border-top: solid black 2px; 
@@ -18,14 +32,12 @@ h1{
     text-decoration: none; 
 }
 .navbar .icon {
-  display: none;
+    display: none;
 }
-
 .dropdown {
-  float: left;
-  overflow: hidden;
+    float: left;
+    overflow: hidden;
 }
-
 .dropdown .btn-dd {
     font-size: 16px;  
     border: none;
@@ -35,101 +47,107 @@ h1{
     background-color: inherit;
     font-family: inherit;
 }
-
 .dd-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dd-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.navbar a:hover, .dropdown:hover, .dd-content a:hover .btn-dd {
-  background-color: lightcoral;
-}
-
-.dropdown:hover .dd-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .navbar a:not(:first-child), .dropdown .btn-dd {
     display: none;
-  }
-  .navbar a.icon {
-    float: right;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dd-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-  }
+    text-align: left;
+}
+.show{
+    display: block;
+}
+.navbar a:hover, .dropdown:hover, .dd-content a:hover .btn-dd {
+    background-color: lightcoral;
+}
+.dropdown:hover .dd-content {
+    display: block;
+}
+
+/*MEDIA SCREENS*/
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child), .dropdown .btn-dd {
+        display: none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block; 
+    }
 }
 @media screen and (min-width:601px){
     .navbar { 
-  display: flex; 
-  justify-content: center; 
-}
+        display: flex; 
+        justify-content: center; 
+    }
+    .slideshow-container{
+        max-width: 960px;
+        max-height: 250px;
+    }
+    .slidePics{
+        width: 960px;
+        height: 250px;
+    }
 }  
 @media screen and (max-width: 600px) {
-  .navbar.responsive {
-      position: relative;
+    .navbar.responsive {
+        position: relative;
     }
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .navbar.responsive .dropdown {
-      float: none;
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
-  .navbar.responsive .dd-content {
-      position: relative;
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
-  .navbar.responsive .dropdown .btn-dd {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+    .navbar.responsive .dropdown {
+        float: none;
+    }
+    .navbar.responsive .dd-content {
+        position: relative;
+    }
+    .navbar.responsive .dropdown .btn-dd {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .slideshow-container{
+        max-width: 100%;
+        max-height: 250px;
+    }
+    .slidePics{
+        width: 100%;
+        height: 250px;
+    }
 }
 
-
-h2{
-    text-align: center;
-    margin-top: 50px; 
-}
-.page{
-    position:absolute;
-    width: 100%;
-    height: auto; 
-}
+/*PAGE 1 = START PAGE*/
 #page1{
     display:block;
     background:pink;
 }
+
+/*SLIDESHOW*/
 .mySlides{
     display: none;
 }
 .slidePics{
     vertical-align: middle;
     background-color: lightgrey;
-    width: 960px;
-    height: 250px;
+   
 }
 .slideshow-container{
-    max-width: 960px;
-    max-height: 250px;
     top: 50px;
     position: relative;
     margin: auto;
@@ -140,10 +158,10 @@ h2{
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
-    width: 100%; /*ÄNDRA TILL PIXLAR!*/
+    width: 100%; 
     text-align: center;
     background-color: rgb(255, 255, 255, 0.8);
-    width: 10%; /*ÄNDRA TILL PIXLAR!*/
+    width: 10%; 
 }
 .numbertext{
     color: #717171;
@@ -214,6 +232,78 @@ h2{
 #page9{
     display:none;
 } 
-.show{
-    display: block;
+
+.shop-items{
+    display: flex; 
+    justify-content: center;
 }
+.shop-item{
+    background-color: white; 
+    margin: 30px; 
+    padding: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.cart-container{
+    width: 50%; 
+    background-color: white; 
+    margin: auto;
+    padding: 60px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.cart-header{
+   margin-right: 10px;
+}
+.cart-column{
+    display: flex; 
+    align-items: center;
+    border-bottom: solid black 2px;  
+    padding-bottom: 10px; 
+    margin-top: 10px; 
+}
+.cart-row{
+    display: flex; 
+}
+.cart-item{
+    width: 35%; 
+}
+.cart-price{
+    width: 40%; 
+    margin-left: 20px;
+}
+.cart-quantity{
+    width: 35%;
+}
+.cart-quantity-input{
+    width: 30px; 
+    height: 20px; 
+}
+.cart-item-title{
+    margin-left: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.btn-remove{
+    margin-left: 20px; 
+}
+.cart-total{
+    float: right;
+    margin-right: 50px; 
+    padding-top: 30px; 
+}
+.btn-purchase{
+    padding: 20px; 
+    background-color: lightgreen; 
+    border-radius: 10px; 
+    border: none; 
+}
+.btn-purchase:hover{
+    background-color: green; 
+}
+.checkout{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; 
+}
+

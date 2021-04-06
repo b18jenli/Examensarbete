@@ -70,8 +70,8 @@ function addItemToCart(title, price, imgSrc) {
             return
         }
     }
-    var cartRowContents = `   
-        <div class="cart-item cart-column">
+    var cartRowContents = 
+        `<div class="cart-item cart-column">
             <img src="${imgSrc}" width="80" height="80" >
             <span class="cart-item-title">${title}</span>
         </div>
@@ -130,7 +130,7 @@ window.onclick = function(e){
 }
         
 var slideIndex = -1;
-showSlides();
+showSlides()
 
 function showSlides() {
     var i;
@@ -150,6 +150,7 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 3000); 
 }
+
 
   function menuFunction() {
                 var x = document.getElementById("menu");
