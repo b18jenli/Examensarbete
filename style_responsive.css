@@ -326,8 +326,8 @@ h2{
   .shop-items .shop-item {
     width: 20%;
   }
-    .shop-item{
-       display: flex; 
+    .shop-items{
+    display: flex; 
     justify-content: center;  
     }
 }
