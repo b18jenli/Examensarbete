@@ -14,10 +14,15 @@ body{
 }
 h1{
     text-align: center; 
+    margin-left: 10px; 
+    margin-right: 10px; 
 }
 h2{
     text-align: center;
     margin-top: 50px; 
+}
+h3{
+    text-align: center;
 }
 
 /*RESPONSIVE NAVBAR*/
@@ -137,73 +142,77 @@ h2{
    
 }
 
+/*MOBIL*/
+@media screen and (max-width:600px) {
+  .shop-items .shop-item {
+    width: 85%;
+  }
+    
+    .cart-item{
+    width: 25%; 
+}
+.cart-price{
+    width: 25%; 
+    margin-left: 20px;
+}
+.cart-quantity{
+    width: 25%;
+}
+.cart-quantity-input{
+    width: 30px; 
+    height: 20px; 
+}
+.cart-item-title{
+    margin-left: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.btn-remove{
+    margin-left: 20px;
+    display: none;
+}
+    .btn-remove:after{
+        content: "x";
+    }
+      .cart-item img{
+        display: none; 
+    } 
+}
+
+/*DESKTOP*/
+@media screen and (min-width:601px) {
+  .shop-items .shop-item {
+    width: 20%;
+  }
+    .shop-items{
+    display: flex; 
+    justify-content: center;  
+    }
+}
+
+
 /*PAGE 1 = START PAGE*/
 #page1{
     display:block;
     background:pink;
 }
-
-/*SLIDESHOW*/
-.mySlides{
-    display: none;
+.image-column img{
+    width: 100%;
+    background-color: purple; 
 }
-.slidePics{
-    vertical-align: middle;
-    background-color: lightgrey;
-   
+.image-column {
+  float: left;
+  width: 50%;
+  padding: 10px;
 }
-.slideshow-container{
-    top: 50px;
-    position: relative;
-    margin: auto;
+.image-row{
+    
 }
-.text{
-    color: #717171;
-    font-size: 9px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%; 
-    text-align: center;
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 10%; 
-}
-.numbertext{
-    color: #717171;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    background-color: rgb(255, 255, 255, 0.6);
-}
-.dot{
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    margin-top:50px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active{
-    background-color: #717171;
-}
-.fade{
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@-webkit-keyframes fade{
-    from {opacity: .4}
-    to {opacity: 1}
-}
-@keyframes fade{
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
+/*.image-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
 
 #page2{
     display:none;
@@ -249,7 +258,7 @@ h2{
 }
 
 .cart-container{
-    width: 50%; 
+    width: 90%; 
     background-color: white; 
     margin: auto;
     padding: 60px; 
@@ -311,26 +320,12 @@ h2{
     margin-top: 50px; 
 }
 
-
-
-/*MOBIL*/
-@media screen and (min-width:600px) {
-  .shop-items .shop-item {
-    float: left;
-    width: 50%;
-  }
+#cart-icon{
+    padding: 15px 10px 10px 0px;  
+    position: absolute;
+    right: 100px; 
 }
 
-/*DESKTOP*/
-@media only screen and (min-width:601px) {
-  .shop-items .shop-item {
-    width: 20%;
-  }
-    .shop-items{
-    display: flex; 
-    justify-content: center;  
-    }
-}
 
 
 
