@@ -6,6 +6,13 @@ h2{
     text-align: center;
     margin-top: 50px; 
 }
+h3{
+    text-align: center;
+}
+p{
+    text-align: center;
+    opacity: 30%; 
+}
 
 #header{
     margin: 50px 0px 50px 0px; 
@@ -20,100 +27,69 @@ h2{
     display:block;
     background:white;
 }
-.mySlides{
-    display: none;
+.page1-container{
+   display: flex;
+   justify-content: center;  
 }
-.slidePics{
-    vertical-align: middle;
-    background-color: lightgrey;
-    width: 960px;
-    height: 250px;
+
+.image-column {
+  float: left;
+  position: relative; 
 }
-.slideshow-container{
-    max-width: 960px;
-    max-height: 250px;
-    top: 50px;
-    position: relative;
-    margin: auto;
+
+.image-column img{
+    display: block;
 }
-.text{
-    color: #717171;
-    font-size: 9px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%; /*ÄNDRA TILL PIXLAR!*/
+
+#row2{
+  display: flex;
+  justify-content: center; 
+margin-left: 80px;     
+}
+
+#row2 img{
+    border-radius: 50%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+    width: 150px; 
+}
+
+#row2 .image-column{
+    padding-right: 100px;  
+}
+#row2 .caption{
     text-align: center;
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 10%; /*ÄNDRA TILL PIXLAR!*/
+     padding-top: 20px;
 }
-.numbertext{
-    color: #717171;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    background-color: rgb(255, 255, 255, 0.6);
+
+.shop-item{
+    background-color: white; 
+    margin: 30px; 
+    padding: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-.dot{
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    margin-top:50px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.shop-item img{
+    width: 225px; 
+    margin-bottom: 10px; 
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.active{
-    background-color: #717171;
+.shop-item-title{
+     font-weight: bold;
 }
-.fade{
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.shop-item-details{
+    text-align: left;
+    margin-top: 10px; 
 }
-@-webkit-keyframes fade{
-    from {opacity: .4}
-    to {opacity: 1}
-}
-@keyframes fade{
-    from {opacity: .4}
-    to {opacity: 1}
-}
-#page2{
-    display:none;
-    background:blue;
-}
-#page3{
-    display:none;
-    background:pink;
-    
-}
-#page4{
-    display:none;
-    background:green;
-}
-#page5{
-    display:none;
-    background:yellow;
-}
-#page6{
-    display:none;
-    background:gray;
+.shop-item-button{
+    float: right; 
 }  
-#page7{
+#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9{
     display:none;
-    background:aqua;
-}  
-#page8{
-    display:none;
-    background:violet;
-}  
-#page9{
-    display:none;
-}  
+} 
 
 #cart-icon{
     padding: 15px 10px 10px 0px;  
@@ -185,15 +161,16 @@ h2{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+
 .cart-container{
-    width: 50%; 
+    width: 600px; 
     background-color: white; 
     margin: auto;
     padding: 60px; 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .cart-header{
-   margin-right: 10px;
+   
 }
 .cart-column{
     display: flex; 
@@ -201,20 +178,12 @@ h2{
     border-bottom: solid black 2px;  
     padding-bottom: 10px; 
     margin-top: 10px; 
+    width: 200px; 
 }
 .cart-row{
     display: flex; 
 }
-.cart-item{
-    width: 35%; 
-}
-.cart-price{
-    width: 40%; 
-    margin-left: 20px;
-}
-.cart-quantity{
-    width: 35%;
-}
+
 .cart-quantity-input{
     width: 30px; 
     height: 20px; 
@@ -229,17 +198,8 @@ h2{
 }
 .cart-total{
     float: right;
-    margin-right: 50px; 
+    
     padding-top: 30px; 
-}
-.btn-purchase{
-    padding: 20px; 
-    background-color: lightgreen; 
-    border-radius: 10px; 
-    border: none; 
-}
-.btn-purchase:hover{
-    background-color: green; 
 }
 .checkout{
     padding-top: 30px;

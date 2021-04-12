@@ -331,19 +331,8 @@ h3{
 }
 .cart-total{
     border-bottom: 0;
-  /*  float: right; 
-    padding: 30px 60px 0px 0px; */
 }
-.cart-item{
-  /*  width: 35%; */
-}
-.cart-price{
-   /* width: 40%; 
-    margin-left: 20px;*/
-}
-.cart-quantity{
-   /* width: 35%;*/
-}
+
 .cart-quantity-input{
     width: 30px; 
     height: 20px; 
