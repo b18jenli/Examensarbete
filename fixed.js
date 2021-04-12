@@ -107,7 +107,7 @@ function showpage(pageid){
         pages[i].style.display="none";
     }
     document.getElementById(pageid).style.display="block";
-    menuFunction()
+   menuFunction()
     }
 
 
@@ -131,6 +131,7 @@ window.onclick = function(e){
         }
     }
 }
+
         
   function menuFunction() {
                 var x = document.getElementById("menu");
@@ -140,5 +141,3 @@ window.onclick = function(e){
                     x.className = "navbar";
                 }
  }
-
-
