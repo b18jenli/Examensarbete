@@ -139,4 +139,6 @@ window.onclick = function(e){
                 } else {
                     x.className = "navbar";
                 }
-            }
+ }
+
+
