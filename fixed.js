@@ -23,6 +23,7 @@ function ready() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCart)
     }
+    
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', makePurchase)
 }
 
@@ -141,3 +142,4 @@ window.onclick = function(e){
                     x.className = "navbar";
                 }
  }
+

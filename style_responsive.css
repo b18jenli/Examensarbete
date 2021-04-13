@@ -24,6 +24,14 @@ h2{
 h3{
     text-align: center;
 }
+.btn:hover{
+    background-color: lightgray;
+    border-radius: 3px; 
+    border: solid 1px gray; 
+}
+.btn:focus{
+    background-color: gray; 
+}
 
 /*RESPONSIVE NAVBAR*/
 .navbar {
@@ -98,10 +106,6 @@ h3{
     .page{
         top: 20%; 
     }
-    h1{
-        
-        
-    }
     .navbar a:not(:first-child), .dropdown .btn-dd{
         display: none;
     }
@@ -145,6 +149,7 @@ h3{
     }
    
 }
+
 
 /*MOBIL*/
 @media screen and (max-width:600px) {
@@ -366,13 +371,10 @@ h3{
 }
 
 .btn-purchase{
-    padding: 20px; 
-    background-color: lightgreen; 
-    border-radius: 10px; 
-    border: none;  
+   
 }
 .btn-purchase:hover{
-    background-color: green; 
+   
 }
 .checkout{
     padding-top: 30px;
