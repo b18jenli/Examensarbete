@@ -109,6 +109,7 @@ function showpage(pageid){
     }
     document.getElementById(pageid).style.display="block";
    menuFunction()
+    
     }
 
 
@@ -142,4 +143,5 @@ window.onclick = function(e){
                     x.className = "navbar";
                 }
  }
+
 
