@@ -15,7 +15,6 @@
     <body> 
         <div id="header">
             <h1>Responsive web page</h1>
-        
         <div class="navbar" id="menu">
             <a class="active" onclick="showpage('page1');">Home</a>
             <div class="dropdown">
@@ -23,6 +22,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dd-content" id="myDropdown">
+                    <a style="display: none;"></a>
                     <a class="menuLink" onclick="showpage('page3'); ">Cups &#38; mugs</a>
                     <a class="menuLink" onclick="showpage('page4'); ">Tableware </a>
                     <a class="menuLink" onclick="showpage('page5'); ">Utensils </a>
@@ -34,6 +34,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dd-content" id="myDropdown2">
+                    <a style="display: none;"></a>
                     <a class="menuLink" onclick="showpage('page6');">Wall decorations</a>
                     <a class="menuLink" onclick="showpage('page7');">Vases</a>
                     <a class="menuLink" onclick="showpage('page8');">Miscellaneous</a>
@@ -79,11 +80,11 @@
                         <img src="images/pexels-mona-termos-3074209.jpg" >
                         <div class="caption">Candles</div>
                     </div>
-                    <div class="image-column"id="id-4">
+                    <div class="image-column"id="img4">
                         <img src="images/pexels-brett-sayles-2821220.jpg"  >
                         <div class="caption">Wall decorations</div>
                     </div>
-                      <div class="image-column" id="id-5">
+                      <div class="image-column" id="img5">
                         <img src="images/pexels-karolina-grabowska-4397820.jpg"  >
                         <div class="caption">Kitchen utensils</div>
                     </div>
@@ -135,9 +136,11 @@
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>   
                  </div>
-            
             </div>
         </section>
+        <div class="bottom-text">
+            <p>Next page -></p>
+        </div>
     </div>
         
          <div id="page4" class="page">

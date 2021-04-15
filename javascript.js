@@ -67,7 +67,7 @@ function addItemToCart(title, price, imgSrc) {
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         if(cartItemNames[i].innerText == title) {
-            alert('This item is already added to your cart, dumbass')
+            alert('This item is already added to your cart')
             return
         }
     }
@@ -108,8 +108,9 @@ function showpage(pageid){
         pages[i].style.display="none";
     }
     document.getElementById(pageid).style.display="block";
-   menuFunction()
-    
+   if(pageid != 'page9'){
+      menuFunction()
+      }    
     }
 
 
@@ -143,5 +144,3 @@ window.onclick = function(e){
                     x.className = "navbar";
                 }
  }
-
-
