@@ -30,6 +30,7 @@ p{
 .page1-container{
    display: flex;
    justify-content: center;  
+    margin-bottom: 100px; 
 }
 
 .image-column {
