@@ -161,17 +161,12 @@ margin-left: 80px;
     padding: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
-
 .cart-container{
     width: 600px; 
     background-color: white; 
     margin: auto;
     padding: 60px; 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.cart-header{
-   
 }
 .cart-column{
     display: flex; 
@@ -184,7 +179,6 @@ margin-left: 80px;
 .cart-row{
     display: flex; 
 }
-
 .cart-quantity-input{
     width: 30px; 
     height: 20px; 

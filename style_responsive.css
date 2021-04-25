@@ -88,7 +88,7 @@ p{
     display: block;
 }
 
-/*PAGE 1*/
+/*HOME PAGE*/
 #page1{
     display:block;
     height: auto;
@@ -281,16 +281,16 @@ p{
         padding: 0 4px;
         justify-content: center;
     }
-    .image-column {
-        -ms-flex: 80%;
-        flex: 80%;
-        max-width: 80%;
-    }
     #row1 img{
         width: 100%; 
         margin-bottom: 10px; 
         vertical-align: middle;
         align-items: center;
+    }
+    .image-column {
+        -ms-flex: 80%;
+        flex: 80%;
+        max-width: 80%;
     }
     #row2 img{ 
         width: 60%; 
