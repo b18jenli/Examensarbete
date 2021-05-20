@@ -13,90 +13,10 @@ p{
     text-align: center;
     opacity: 30%; 
 }
-
 #header{
     margin: 50px 0px 50px 0px; 
 }
-.page{
-    position:absolute;
-    left:30px;
-    top:200px;
-    right:30px;
-}
-#page1{
-    display:block;
-    background:white;
-}
-.page1-container{
-   display: flex;
-   justify-content: center;  
-    margin-bottom: 100px; 
-}
-
-.image-column {
-  float: left;
-  position: relative; 
-}
-
-.image-column img{
-    display: block;
-}
-
-#row2{
-  display: flex;
-  justify-content: center; 
-margin-left: 80px;     
-}
-
-#row2 img{
-    border-radius: 50%; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: none;
-    width: 150px; 
-}
-
-#row2 .image-column{
-    padding-right: 100px;  
-}
-#row2 .caption{
-    text-align: center;
-     padding-top: 20px;
-}
-
-.shop-item{
-    background-color: white; 
-    margin: 30px; 
-    padding: 30px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.shop-item img{
-    width: 225px; 
-    margin-bottom: 10px; 
-     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.shop-item-title{
-     font-weight: bold;
-}
-.shop-item-details{
-    text-align: left;
-    margin-top: 10px; 
-}
-.shop-item-button{
-    float: right; 
-}  
-#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9{
-    display:none;
-} 
-
-#cart-icon{
-    padding: 15px 10px 10px 0px;  
-    position: absolute;
-    right: 100px; 
-}
+/*NAVBAR*/
 .navbar{
     overflow: hidden;
     border-top: solid black 2px; 
@@ -128,7 +48,6 @@ margin-left: 80px;
 .navbar a:hover, .dropdown:hover .btn-dd{
     background-color: lightcoral;
 }
-
 .dd-content{
     display: none;
     position: absolute;
@@ -148,18 +67,99 @@ margin-left: 80px;
 .dd-content a:hover{
     background-color: lightcoral;
 }
+.page{
+    position:absolute;
+    left:30px;
+    top:200px;
+    right:30px;
+    height: auto;
+}
 .show{
     display: block;
 }
+
+/*HOME PAGE*/
+#page1{
+    display:block;
+    background:white;
+}
+.page1-container{
+   display: flex;
+   justify-content: center;  
+    margin-bottom: 100px; 
+}
+.image-column {
+  float: left;
+  position: relative; 
+}
+.image-column img{
+    display: block;
+}
+#row2{
+  display: flex;
+  justify-content: center; 
+margin-left: 80px;     
+}
+#row2 img{
+    border-radius: 50%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+    width: 150px; 
+}
+#row2 .image-column{
+    padding-right: 100px;  
+}
+#row2 .caption{
+    text-align: center;
+     padding-top: 20px;
+}
+
+/*OTHER PAGES*/
+#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9{
+    display:none;
+    height: auto;
+} 
+
+/*SHOP ITEMS*/
 .shop-items{
     display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
 }
 .shop-item{
     background-color: white; 
-    margin: 30px; 
+    margin: 26px; 
     padding: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.shop-item img{
+    width: 225px; 
+    margin-bottom: 10px; 
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.shop-item-title{
+     font-weight: bold;
+}
+.shop-item-details{
+    text-align: left;
+    margin-top: 10px; 
+}
+.shop-item-button{
+    float: right; 
+}  
+.btn-secondary{
+    float: right; 
+}
+
+/*CART ITEMS*/
+#cart-icon{
+    padding: 15px 10px 10px 0px;  
+    position: absolute;
+    right: 100px; 
 }
 .cart-container{
     width: 600px; 
@@ -193,7 +193,6 @@ margin-left: 80px;
 }
 .cart-total{
     float: right;
-    
     padding-top: 30px; 
 }
 .checkout{
@@ -202,6 +201,3 @@ margin-left: 80px;
     justify-content: center;
     margin-top: 50px; 
 }
-
-    
-     

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive web page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script src="javascript.js" async></script>
+        <script src="https://kit.fontawesome.com/352148c971.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    </head>
+  
+    
+    <body> 
+        <div id="header">
+            <h1>Responsive web page</h1>
+        <div class="navbar" id="menu">
+            <a class="active" onclick="showpage('page1');">Home</a>
+            <div class="dropdown">
+                <button class="btn-dd" onclick="myDropdown()">Kitchen
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dd-content" id="myDropdown">
+                    <a style="display: none;"></a>
+                    <a class="menuLink" onclick="showpage('page3'); ">Cups &#38; mugs</a>
+                    <a class="menuLink" onclick="showpage('page4'); ">Tableware </a>
+                    <a class="menuLink" onclick="showpage('page5'); ">Utensils </a>
+                </div>
+            </div> 
+            
+            <div class="dropdown">
+                <button class="btn-dd" onclick="myDropdown2()">Livingroom
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dd-content" id="myDropdown2">
+                    <a style="display: none;"></a>
+                    <a class="menuLink" onclick="showpage('page6');">Wall decorations</a>
+                    <a class="menuLink" onclick="showpage('page7');">Vases</a>
+                    <a class="menuLink" onclick="showpage('page8');">Miscellaneous</a>
+                </div>
+            </div> 
+            <a onclick="showpage('page2');">About</a>
+            <i class="fas fa-shopping-cart" id="cart-icon" onclick="showpage('page9');"></i>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuFunction();">&#9776;</a>
+            </div>
+        </div>
+        
+          <div id="page1" class="page">
+            <h2>HOME</h2>  
+              <section class="page1-container">
+                <div class="image-row" id="row1">
+                    <div class="image-column" id="column1">
+                        <img src="images/pexels-pixabay-462235.jpg">
+                    </div>
+                   
+                    <div class="image-column" id="column2" > 
+                        <img src="images/pexels-sammsara-luxury-modern-home-1099816.jpg">
+                    </div>
+                    
+                    <div class="image-column" id="column3">
+                        <img src="images/pexels-meruyert-gonullu-6243732.jpg" style="margin-bottom: 10px; ">
+                        <img src="images/pexels-kristina-paukshtite-2417857.jpg">
+                    </div>
+                </div>
+              </section>
+             
+              <h3> Popular: </h3>
+              <section class="page1-container">
+                <div class="image-row" id="row2">
+                    <div class="image-column">
+                        <img src="images/pexels-sharon-mccutcheon-1148450.jpg"  >
+                        <div class="caption">Vases</div>
+                    </div>
+                    <div class="image-column">
+                        <img src="images/pexels-dominika-roseclay-905198.jpg" >
+                        <div class="caption">Mirrors</div>
+                    </div>
+                    <div class="image-column">
+                        <img src="images/pexels-mona-termos-3074209.jpg" >
+                        <div class="caption">Candles</div>
+                    </div>
+                    <div class="image-column"id="img4">
+                        <img src="images/pexels-brett-sayles-2821220.jpg"  >
+                        <div class="caption">Wall decorations</div>
+                    </div>
+                      <div class="image-column" id="img5">
+                        <img src="images/pexels-karolina-grabowska-4397820.jpg"  >
+                        <div class="caption">Kitchen utensils</div>
+                    </div>
+                </div>
+              </section>
+            </div>
+        
+         <div id="page2" class="page">
+          <h2>ABOUT (2)</h2>
+        </div>
+        
+    <div id="page3" class="page">     
+        <section>
+            <h2>Cups &#38; mugs </h2>
+            <p>Kitchen > Cups &#38; mugs</p>
+            <div class="shop-items">
+                  <div class="shop-item">
+                    <img class="shop-item-image" src="images/redcup.jpg">
+                    <span class="shop-item-title">Red cup</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">29 sek</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>   
+                </div>
+                
+              <div class="shop-item">
+                    <img class="shop-item-image" src="images/whitecup.jpg">
+                    <span class="shop-item-title">White cup</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">29 sek</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>   
+                </div>
+             
+                  <div class="shop-item">
+                    <img class="shop-item-image" src="images/orangemug.jpg">
+                    <span class="shop-item-title">Orange mug</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">99 sek</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>   
+                </div>
+                
+                  <div class="shop-item">
+                    <img class="shop-item-image" src="images/greenmug.jpg">
+                     <span class="shop-item-title">Green mug</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">129 sek</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>   
+                 </div>
+            </div>
+        </section>
+        <div class="bottom-text">
+            <p>Next page -></p>
+        </div>
+    </div>
+        
+         <div id="page4" class="page">
+               <section>
+                <h2>Tableware</h2>
+                <p>Kitchen > Tableware</p>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <img class="shop-item-image" src="images/goldbowl.jpg">
+                            <span class="shop-item-title">Gold bowl</span>
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">119 sek</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>   
+                        </div>
+
+                      <div class="shop-item">
+                            <img class="shop-item-image" src="images/whiteplate.jpg">
+                            <span class="shop-item-title">White plate</span>
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">49 sek</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>   
+                        </div>
+
+                      <div class="shop-item">
+                            <img class="shop-item-image" src="images/blackteapot.jpg">
+                            <span class="shop-item-title">Black teapot</span>
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">399 sek</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>   
+                        </div>
+                
+                  <div class="shop-item">
+                    <img class="shop-item-image" src="images/sushiplate.jpg">
+                      <span class="shop-item-title">Sushi plate</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">79 sek</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>   
+                 </div>
+                </div>
+            </section>
+        </div>
+        
+         <div id="page5" class="page">
+             <section>
+                 <h2>Utensils</h2>
+                 <p>Kitchen > Utensils</p>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <img class="shop-item-image" src="images/woodencutlery.jpg">
+                            <span class="shop-item-title">Wooden cutlery</span>
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">299 sek</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>   
+                        </div>
+
+                      <div class="shop-item">
+                            <img class="shop-item-image" src="images/blackforks.jpg">
+                            <span class="shop-item-title">Black fork set</span>
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">199 sek</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>   
+                        </div>
+
+                      <div class="shop-item">
+                            <img class="shop-item-image" src="images/cookingutensils.jpg">
+                            <span class="shop-item-title">Cooking utensils</span>
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">99 sek</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>   
+                        </div>
+                
+                  <div class="shop-item">
+                    <img class="shop-item-image" src="images/blackspoons.jpg">
+                      <span class="shop-item-title">Black spoon set</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">199 sek</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>   
+                 </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="page6" class="page">
+            <section>
+                <h2>Wall decorations </h2>
+                <p>Livingroom > Walldecorations</p>
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/letterart.jpg">
+                        <span class="shop-item-title">Letter board</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">199 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/picset.jpg">
+                        <span class="shop-item-title">Picture set</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">499 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/mirror.jpg">
+                        <span class="shop-item-title">Round mirror</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">129 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/clock.jpg">
+                        <span class="shop-item-title">Wall clock</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">299 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="page7" class="page">
+            <section>
+                <h2>Vases </h2>
+                <p>Livingroom > Vases</p>
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/miniset.jpg">
+                        <span class="shop-item-title">Mini vase set</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">79 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                  <div class="shop-item">
+                        <img class="shop-item-image" src="images/whitevase.jpg">
+                        <span class="shop-item-title">White round vase</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">699 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                  <div class="shop-item">
+                        <img class="shop-item-image" src="images/greenvase.jpg">
+                        <span class="shop-item-title">Green vase</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">299 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/beigevase.jpg">
+                        <span class="shop-item-title">Small beige vase</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">49 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                     </div>
+                </div>
+            </section>
+        </div>
+        
+         <div id="page8" class="page">
+             <section>
+                <h2>Miscellaneous</h2>
+                <p>Livingroom > Miscellaneous</p>
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/pexels-mona-termos-3074209.jpg">
+                        <span class="shop-item-title">Scented candle</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">79 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                  <div class="shop-item">
+                        <img class="shop-item-image" src="images/pexels-meruyert-gonullu-6243732(2).jpg">
+                        <span class="shop-item-title">Orange pillow set</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">499 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                  <div class="shop-item">
+                        <img class="shop-item-image" src="images/pexels-nadi-lindsay-2972476.jpg">
+                        <span class="shop-item-title">Red candle</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">99 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                    </div>
+
+                    <div class="shop-item">
+                        <img class="shop-item-image" src="images/pexels-sammsara-luxury-modern-home-1099816(2).jpg">
+                        <span class="shop-item-title">Globe decoration</span>
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">299 sek</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>   
+                     </div>
+                </div>
+            </section>
+        </div>
+        
+         <div id="page9" class="page">
+             <h2>CART</h2>
+             <section class="cart-container">
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-item cart-header cart-column">PRICE</span>
+                    <span class="cart-item cart-header cart-column">QUANTITY</span>
+                </div>
+                 
+                <div class="cart-items"></div>
+                 
+                <div class="cart-row">
+                    <span class="cart-column cart-total"></span> 
+                    <span class="cart-column cart-total"></span>
+                    <div class="cart-total cart-column">
+                        <strong class="cart-total-title">TOTAL:</strong>&#160;
+                        <span class="cart-total-price">0 sek</span>    
+                    </div>
+                </div>
+                 
+                <div class="cart-row">
+                    <span class="cart-column cart-total"></span> 
+                    <div class="checkout cart-column cart-total">
+                        <button class="btn btn-purchase">PURCHASE</button>
+                    </div>
+                    <span class="cart-column cart-total"></span> 
+                </div>
+            </section>  
+        </div>
+    </body>
+</html>

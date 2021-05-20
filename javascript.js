@@ -1,3 +1,71 @@
+var activeCategory = "";
+var pageCategory = {
+    "page3":"cups", 
+    "page4":"tableware", 
+    "page5":"utensils", 
+    "page6":"walldecor", 
+    "page7":"vases",
+    "page8":"misc"
+}
+var articles = [];
+
+function showpage(pageid) {
+    var pages = document.getElementsByClassName("page");
+    for(var i = 0; i < pages.length; i++){
+        pages[i].style.display="none";
+    }
+    document.getElementById(pageid).style.display="block";
+    alert(pageCategory[pageid]);
+    getArticles(pageCategory[pageid]);
+   if(pageid != 'page9'){
+      menuFunction()
+      }    
+    }
+
+function getArticles(category){
+    activeCategory=category;
+        var jqxhr = $.ajax("articleservice.php", {
+            method:"POST",
+            data:{
+                category: encodeURIComponent(category),
+            }
+        })
+        .done(serviceResults)
+        .fail(function() {
+          console.log( "Error" );
+        })
+        .always(function() {
+          console.log( "Request articles for category "+category+" has completed." );
+        });
+}
+
+function serviceResults(data){
+    console.log(data);
+    articles.length=0;
+    for(var i = 0; i < data.length; i++){
+        var article= data[i];
+        articles.push(article);
+    }
+    renderItems(activeCategory);
+}
+function renderItems(kategori){
+    console.log("articles", articles.length);
+    var articleStr="";
+    for(var i =0; i< articles.length; i++){
+        var article= articles[i];
+        articleStr+= '<div class="shop-item">';
+            articleStr+= '<img class="shop-item-image" src="images/'+article.img+'">';
+            articleStr+= '<span class="shop-item-title">'+article.id+'</span>';
+            articleStr+= '<div class="shop-item-details">';
+                articleStr+= '<span class="shop-item-price">'+article.price+'</span>';
+                articleStr+= '<button class="btn-secondary" type="button" disabled>OUT OF STOCK</button>';
+            articleStr+= '</div>';
+        articleStr+= '</div>';
+    }
+    alert(articleStr);
+    document.getElementById(kategori).innerHTML=articleStr;
+}
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 }else{
@@ -71,7 +139,7 @@ function addItemToCart(title, price, imgSrc) {
             return
         }
     }
-    var cartRowContents = 
+var cartRowContents =
         `<div class="cart-item cart-column">
             <img src="${imgSrc}" width="60" height="60" >
             <span class="cart-item-title">${title}</span>
@@ -102,19 +170,8 @@ function updateCartTotal() {
     document.getElementsByClassName('cart-total-price')[0].innerText =  total + 'sek'
 }
 
-function showpage(pageid){
-    var pages = document.getElementsByClassName("page");
-    for(var i = 0; i < pages.length; i++){
-        pages[i].style.display="none";
-    }
-    document.getElementById(pageid).style.display="block";
-   if(pageid != 'page9'){
-      menuFunction()
-      }    
-    }
 
-
-
+/*DROP DOWN FUNCTIONS IN NAVBAR*/
 function myDropdown(){
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -135,12 +192,13 @@ window.onclick = function(e){
     }
 }
 
-        
-  function menuFunction() {
-                var x = document.getElementById("menu");
-                if (x.className === "navbar") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "navbar";
-                }
+/*MAKES NAVBAR RESPONSIVE*/        
+function menuFunction() {
+    var x = document.getElementById("menu");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
  }
+

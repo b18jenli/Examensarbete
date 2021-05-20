@@ -29,6 +29,13 @@ p{
     text-align: center;
     opacity: 30%; 
 }
+.shop-items{
+      display: flex;
+    flex-wrap: wrap;
+}
+.btn-secondary{
+    float: right; 
+}
 
 /*NAVBAR*/
 .navbar {
